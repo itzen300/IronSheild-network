@@ -1,1 +1,2 @@
-Network troubleshooting is the systematic process of identifying, diagnosing, and fixing connectivity or performance issues by isolating problems. Effective techniques include verifying physical connections, restarting hardware, using command-line tools (ping, ipconfig, traceroute), checking IP configurations, and reducing the problem scope.
+Network troubleshooting is the systematic process of identifying, diagnosing, and fixing connectivity or performance issues by isolating problems.
+Effective techniques include verifying physical connections, restarting hardware, using command-line tools (ping, ipconfig, traceroute), checking IP configurations, and reducing the problem scope.
