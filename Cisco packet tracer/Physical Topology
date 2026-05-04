@@ -1,0 +1,12 @@
+Devices per campus:
+
+Every campus: 1× Cisco 2960 Layer 2 switch + 2 PCs
+Campus 6 (Master): 1× Cisco 3560 Multilayer Switch (this is your core router)
+Campus 3 (Entry): Add 1× Server (AAA/RADIUS)
+Campus 25 (Storage): Add 1× Server (file server)
+
+Cabling:
+
+All campus 2960 switches → uplink to the Cp6 3560 via trunk links (use straight-through between switches)
+PCs → their local 2960 switch via straight-through cables
+Servers → their local campus switch
