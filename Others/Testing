@@ -1,0 +1,15 @@
+! On Cp6 Master:
+show vlan brief                      ! All VLANs should show active
+show interfaces trunk                ! Trunk links to all campuses
+show ip route                        ! OSPF routes should appear
+show ip ospf neighbor                ! Should list all campus switches
+show access-lists                    ! Confirm ACL entries
+
+! On any PC (Command Prompt):
+ping 192.168.6.1                     ! Should reach master gateway
+ping 192.168.3.1                     ! Should reach Cp3 gateway
+ping 192.168.8.10                    ! Test reach to Cp8 PC (ACL will block from some)
+
+! Test ACL blocking:
+! From a Cp8 PC — ping 192.168.12.10 → should FAIL (blocked by ACL)
+! From a Cp3 PC — ping 192.168.6.1 → should FAIL (DMZ blocks master)
