@@ -116,23 +116,15 @@ The infrastructure consists of **6 campus zones**, each mapped to a dedicated VL
 Iron-Shield/
 │
 ├── Cisco packet tracer/
-│   ├── iron_shield_topology.pkt
-│   └── backup_versions/
+│   
 │
 ├── Servers/
-│   ├── radius_server_config.txt
-│   ├── aaa_setup.txt
-│   └── authentication_policies.txt
+│   
 │
 ├── Switches/
-│   ├── core_switch_config.txt
-│   ├── access_switch_configs/
-│   └── vlan_trunk_configs.txt
+│   
 │
 ├── Others/
-│   ├── topology_diagram.png
-│   ├── vlan_table.xlsx
-│   ├── ip_addressing_scheme.pdf
-│   └── verification_outputs/
+│   
 │
 └── README.md
