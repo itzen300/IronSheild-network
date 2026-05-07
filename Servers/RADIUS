@@ -1,15 +1,17 @@
-! === ACL 1: Campus 8 — wired only, no inter-campus traffic ===
-! Block Cp8 from reaching Cp3 (no auth bypass), Cp12 (no remote access)
+=== ACL 1: Campus 8 — wired only, no inter-campus traffic ===
+
+Block Cp8 from reaching Cp3 (no auth bypass), Cp12 (no remote access)
 ip access-list extended ACL_CP8_RESTRICT
  deny ip 192.168.8.0 0.0.0.255 192.168.3.0 0.0.0.255
  deny ip 192.168.8.0 0.0.0.255 192.168.12.0 0.0.0.255
  permit ip 192.168.8.0 0.0.0.255 192.168.6.0 0.0.0.255
  permit ip any any
 
+
 interface vlan 8
  ip access-group ACL_CP8_RESTRICT in
 
-! === ACL 2: Campus 3 — DMZ, only allows inbound user traffic ===
+=== ACL 2: Campus 3 — DMZ, only allows inbound user traffic ===
 ip access-list extended ACL_CP3_DMZ
  permit tcp any 192.168.3.0 0.0.0.255 eq 80
  permit tcp any 192.168.3.0 0.0.0.255 eq 443
@@ -17,14 +19,21 @@ ip access-list extended ACL_CP3_DMZ
  deny ip any 192.168.6.0 0.0.0.255
  permit ip any any
 
+
 interface vlan 3
  ip access-group ACL_CP3_DMZ in
 
-! === ACL 3: Campus 12 — allow remote endpoints, block direct master access ===
+=== ACL 3: Campus 12 — allow remote endpoints, block direct master access ===
 ip access-list extended ACL_CP12_REMOTE
  deny ip 192.168.12.0 0.0.0.255 192.168.6.0 0.0.0.255
  permit ip 192.168.12.0 0.0.0.255 192.168.3.0 0.0.0.255
  permit ip any any
 
+
 interface vlan 12
  ip access-group ACL_CP12_REMOTE in
+
+----
+aaa new-model
+aaa authentication login default group radius local
+radius-server host 192.168.3.10 key ironshield123
