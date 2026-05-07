@@ -1,2 +1,62 @@
-Network troubleshooting is the systematic process of identifying, diagnosing, and fixing connectivity or performance issues by isolating problems.
-Effective techniques include verifying physical connections, restarting hardware, using command-line tools (ping, ipconfig, traceroute), checking IP configurations, and reducing the problem scope.
+#  Network Troubleshooting & Verification :-
+
+Network troubleshooting is the systematic process of identifying, diagnosing, and resolving connectivity, routing, authentication, or performance-related issues within the enterprise infrastructure.
+
+In the Iron Shield Enterprise Campus Network Simulation, troubleshooting was performed using both logical verification techniques and practical Cisco CLI testing commands to validate network stability, routing behavior, VLAN segmentation, and security enforcement 
+with the help of Cisco Packet Tracer CLI.
+
+---
+
+#  Troubleshooting Objectives :-
+
+The troubleshooting process focused on:
+
+- Verifying VLAN connectivity
+- Ensuring proper OSPF neighbor formation
+- Testing inter-VLAN routing
+- Validating ACL restrictions
+- Confirming authentication
+- Testing SSH remote access
+- Detecting trunking or VLAN mismatch issues
+- Ensuring DMZ isolation policies function correctly
+
+---
+
+#  Troubleshooting Methodology :-
+
+## 1. Physical & Topology Verification
+Initial verification ensured:
+- Proper device interconnections
+- Correct interface assignments
+- Active switch/router interfaces
+- Proper trunk uplinks between switches
+
+### Commands Used by me in the process are :-
+```cisco
+show interfaces status
+show cdp neighbors
+show ip interface brief
+
+show vlan brief
+show interfaces trunk
+
+show ip ospf neighbor
+show ip route ospf
+show ip protocols
+
+CoreSwitch# show ip route ospf
+O    192.168.8.0/24 [110/2] via 10.0.0.2, Gig0/1
+O    192.168.12.0/24 [110/3] via 10.0.0.6, Gig0/2
+
+CP25> ping 192.168.25.10
+Reply from 192.168.25.10: bytes=32 time<1ms TTL=127
+Reply from 192.168.25.10: bytes=32 time<1ms TTL=127
+Reply from 192.168.25.10: bytes=32 time<1ms TTL=127
+Reply from 192.168.25.10: bytes=32 time<1ms TTL=127
+
+
+CP55> ping 192.168.6.10
+
+Request timed out.
+Request timed out.
+Request timed out.
