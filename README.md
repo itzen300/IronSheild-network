@@ -5,7 +5,7 @@ A full-scale enterprise campus network simulation modeled on KIIT University's i
 This project demonstrates practical implementation of secure enterprise networking concepts including VLAN segmentation, dynamic routing, centralized authentication, access control policies, and secure remote management.
 
 
-#  Project Overview
+#  Project Overview :-
 
 Iron Shield is a multi-campus enterprise network simulation designed to replicate a real-world university infrastructure environment.
 
@@ -22,7 +22,7 @@ The project focuses on:
 
 ---
 
-#  Network Architecture
+#  Network Architecture :-
 
 The infrastructure consists of **6 campus zones**, each mapped to a dedicated VLAN.
 
@@ -38,43 +38,43 @@ The infrastructure consists of **6 campus zones**, each mapped to a dedicated VL
 
 ---
 
-# ⚙️ Core Features
+#  Core Features :-
 
-## 🔹 VLAN Segmentation
+##  VLAN Segmentation
 - Department-wise logical segmentation using VLANs
 - Reduced broadcast domains
 - Improved traffic isolation and security
 
-## 🔹 Inter-VLAN Routing
+##  Inter-VLAN Routing
 - Implemented using Cisco Layer 3 Multilayer Switch
 - High-speed routing between campus zones
 - Centralized at Campus 6
 
-## 🔹 Dynamic Routing (OSPF)
+##  Dynamic Routing (OSPF)
 - OSPF configured for automatic route learning
 - Fast reconvergence during link failures
 - Scalable routing architecture
 
-## 🔹 Secure Authentication
+##  Secure Authentication
 - Centralized RADIUS/AAA authentication server
 - Secure SSH login for administrators
 - Local credential fallback enabled
 
-## 🔹 ACL-Based Security
+##  ACL-Based Security
 - Extended ACLs enforce least-privilege communication
 - Controlled access between campus zones
 - DMZ isolation policies implemented
 
-## 🔹 SSH Hardening
+##  SSH Hardening
 - Secure remote device management
 - Telnet disabled
 - VTY lines protected with AAA authentication
 
 ---
 
-# 🔐 Security Policies
+#  Security Policies :-
 
-## Campus 8 — Mechanical Department
+## Campus 8 — Core Engg Department
 - Most restricted campus
 - Wired-only access
 - Blocked from:
@@ -82,7 +82,7 @@ The infrastructure consists of **6 campus zones**, each mapped to a dedicated VL
   - Authentication zones
   - Core management systems
 
-## Campus 12 — Electrical Department
+## Campus 12 — Electronics Department
 - Handles external remote access points
 - Isolated from Master Controller
 - Limited inter-campus communication
@@ -96,7 +96,7 @@ The infrastructure consists of **6 campus zones**, each mapped to a dedicated VL
 
 ---
 
-# 🧰 Technologies & Protocols Used
+#  Technologies & Protocols Used :-
 
 - Cisco Packet Tracer
 - VLANs
@@ -110,7 +110,7 @@ The infrastructure consists of **6 campus zones**, each mapped to a dedicated VL
 
 ---
 
-# 📂 Repository Structure
+#  Repository Structure :-
 
 ```bash
 Iron-Shield/
