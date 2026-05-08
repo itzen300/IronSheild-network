@@ -3,8 +3,8 @@
 | enable                             | `en`                   |
 | configure terminal                 | `conf t`               |
 | interface                          | `int`                  |
-| serial                             | `se`                   |
-| gigabitEthernet                    | `gi`                   |
+| serial                             | `se` `s0/0/0`          |
+| gigabitEthernet                    | `gi` `g0/0`            |
 | fastEthernet                       | `fa`                   |
 | no shutdown                        | `no sh`                |
 | show running-config                | `sh run`               |
